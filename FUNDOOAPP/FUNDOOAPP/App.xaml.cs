@@ -26,7 +26,10 @@ namespace FUNDOOAPP
         public App()
         {
             this.InitializeComponent();
-            this.MainPage = new NavigationPage(new Login());
+            this.MainPage = new NavigationPage(new Login()) {
+                BarBackgroundColor=Color.White,
+                BarTextColor= Color.White
+            };
         }
 
         /// <summary>

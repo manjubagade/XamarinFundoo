@@ -50,6 +50,7 @@ namespace FUNDOOAPP.views
         public Homepage()
         {
             this.InitializeComponent();
+            
         }
 
         /// <summary>
@@ -182,14 +183,14 @@ namespace FUNDOOAPP.views
                            // BackgroundColor = Color.White
                         };
 
-                        var panGesture = new PanGestureRecognizer();
-                        panGesture.PanUpdated += OnPanUpdated;
+                       // var panGesture = new PanGestureRecognizer();
+                      //  panGesture.PanUpdated += OnPanUpdated;
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         layout.Children.Add(labelKey);
                         layout.Children.Add(label);
                         layout.Children.Add(content);
                         layout.GestureRecognizers.Add(tapGestureRecognizer);
-                        layout.GestureRecognizers.Add(panGesture);
+                       // layout.GestureRecognizers.Add(panGesture);
                         layout.Spacing = 2;
                         layout.Margin = 2;
                         //layout.BackgroundColor = Color.White;
