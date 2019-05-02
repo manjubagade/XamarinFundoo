@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FUNDOOAPP.views.ListViewNote">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Searchbar" Text="Search note                              " Priority="0"/>
+        <ToolbarItem x:Name="Cancel" Order="Primary"  Icon="gridicon.png" Clicked="Cancel_Clicked"/>
+        <ToolbarItem x:Name="save"  Text="SIGN OUT"  Icon="sigout.png"  Order="Secondary"/>
+        <ToolbarItem x:Name="Another" Text="ANOTHER ACCOUNT" Order="Secondary" />
+        <ToolbarItem x:Name="Delete" Text="Delete" Order="Secondary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <RelativeLayout>
+
+            <ScrollView Orientation="Vertical" VerticalOptions="StartAndExpand" HeightRequest="480">
+                <Grid x:Name="GridLayout"></Grid>
+            </ScrollView>
+
+
+            <StackLayout VerticalOptions="End"  BackgroundColor="White"
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
+
+                <StackLayout Orientation="Horizontal" >
+                    <Button Text=" Take a note......" x:Name="Takenote" TextColor="Black"   BackgroundColor="White" Clicked="Takenote_Clicked"/>
+                    <ImageButton  Source="checking.png" HeightRequest="15" WidthRequest="50" BackgroundColor="White"  Padding="5,10,5,10"/>
+                    <ImageButton Source="pencil.png" HeightRequest="15" WidthRequest="50" BackgroundColor="White" Padding="5,10,5,10"/>
+                    <ImageButton Source="recorder.png" HeightRequest="15" WidthRequest="50" BackgroundColor="White" Padding="5,10,5,10" />
+                    <ImageButton Source="gal.png" HeightRequest="15" WidthRequest="50" BackgroundColor="White" Padding="5,10,5,10"/>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

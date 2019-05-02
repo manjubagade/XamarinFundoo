@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FUNDOOAPP.views.Forgotpage" Title="Forgot PassWord" BackgroundColor="AliceBlue">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+            <StackLayout>
+                <Image Source="forgot.png" HeightRequest="120" WidthRequest="120"/>
+            </StackLayout>
+            <Label x:Name="email" Text="ENTER YOUR GIVEN MAIL" TextColor="Blue" FontSize="Large" FontAttributes="Bold"/>
+            <Entry x:Name="emailss" Placeholder="ENTER YOUR EMAIL"/>
+            <StackLayout>
+                <Button Text="SUBMIT" Clicked="Button_Clicked"  BackgroundColor="Black" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

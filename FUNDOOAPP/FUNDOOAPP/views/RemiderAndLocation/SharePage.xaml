@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FUNDOOAPP.views.RemiderAndLocation.SharePage">
+    <StackLayout Margin="12"
+                 Padding="24"
+                 BackgroundColor="White"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Grid x:Name="controlGrid" RowSpacing="0" ColumnSpacing="0">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text=" add image" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" TextColor="Black" FontAttributes="Bold"/>
+            <ImageButton Source="camera.png" Grid.Row="1" Grid.Column="0"   BackgroundColor="White"  x:Name="MyImage"/>
+            <Button  Text ="Take photo" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="8" FontSize="Small"  BackgroundColor="White" Clicked="Button_Clicked_1" />
+
+            <ImageButton Source="gal.png" Grid.Row="2" Grid.Column="0"  BackgroundColor="White"/>
+            <Button Text ="Choose image" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="8"  FontSize="Small" BackgroundColor="White" Clicked="Button_Clicked"/>
+    
+        </Grid>
+    </StackLayout>
+</pages:PopupPage>

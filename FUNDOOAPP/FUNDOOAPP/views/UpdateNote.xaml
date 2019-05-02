@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FUNDOOAPP.views.UpdateNote" BackgroundColor="White">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  x:Name="alaram" Clicked="Nodification_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:DataType="FileImageSource" Android="Alaram.png"></OnPlatform> 
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="pincard"  Clicked="Pincard_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:DataType="FileImageSource" Android="pinicon.png"></OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem  Clicked="ToolbarItem_Clicked" 
+                     x:Name="archived">
+            <ToolbarItem.Icon>
+                <OnPlatform x:DataType="FileImageSource"
+                            Android="archiveicon.png"></OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem  Order="Primary"
+                     Clicked="Unarchived_Clicked_1"
+                     x:Name="unarchived" >
+            <ToolbarItem.Icon>
+                <OnPlatform x:DataType="FileImageSource"
+                            Android="unarchive"></OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Order="Primary" x:Name="deleted"  Clicked="Deleted_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:DataType="FileImageSource" Android="delete.png"></OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem  x:Name="Restoredata" Clicked="Restoredata_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:DataType="FileImageSource" Android="Restore.png">
+                    
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem x:Name="PinCard1" Clicked="PinCard1_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:DataType="FileImageSource" Android="unpin.png"></OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <RelativeLayout>
+            
+            <StackLayout x:Name="UpdateNoteLayout" >
+                <StackLayout>
+                    <Editor x:Name="editor" Placeholder="                        Title                                            " 
+                            PlaceholderColor="Olive" FontSize="Large" FontAttributes="Bold" IsSpellCheckEnabled="True" AutoSize="TextChanges" ></Editor>
+                </StackLayout>
+                <StackLayout>
+                    <Editor x:Name="editorNote" Placeholder="                       Notes                                             " 
+                            PlaceholderColor="Olive" FontSize="Large" FontAttributes="Bold" IsSpellCheckEnabled="True" AutoSize="TextChanges" ></Editor>
+                </StackLayout>
+                <StackLayout x:Name="layout"/>
+            </StackLayout>
+            <!--<StackLayout  Orientation="Horizontal" x:Name="layout"/>-->
+            <StackLayout VerticalOptions="End" BackgroundColor="White" 
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
+
+                <StackLayout Orientation="Horizontal"    >
+                    <ImageButton x:Name="Listview" Source="plus.png" HeightRequest="30" WidthRequest="50" Padding="5,5,10,5" BackgroundColor="White" Clicked="Listview_Clicked" />
+                    <Label x:Name="space" Text="                                                                                             "/>
+                    <ImageButton Source="menuitem.png" HeightRequest="30" WidthRequest="35"  BackgroundColor="White" Clicked="ImageButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="End" BackgroundColor="White" 
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
+
+                <StackLayout Orientation="Horizontal"    >
+                    <ImageButton x:Name="Listview1" Source="plus.png" HeightRequest="30" WidthRequest="50" Padding="5,5,10,5" BackgroundColor="White" Clicked="Listview_Clicked" />
+                    <ScrollView Orientation="Horizontal" BackgroundColor="White">
+                        <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                            <Button BackgroundColor="Aqua" x:Name="Aque" CornerRadius="30"  WidthRequest="35" HeightRequest="35" Clicked="Aque_Clicked"/>
+                            <Button BackgroundColor="DarkGoldenrod" x:Name="DarkGoldenrod" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="DarkGoldenrod_Clicked" />
+                            <Button BackgroundColor="Green" x:Name="Green" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Green_Clicked"/>
+                            <Button BackgroundColor="Gold" x:Name="Gold" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Gold_Clicked"/>
+                            <Button BackgroundColor="GreenYellow" x:Name="GreenYellow" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="GreenYellow_Clicked"/>
+                            <Button BackgroundColor="Gray" x:Name="Gray" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Gray_Clicked"/>
+                            <Button BackgroundColor="Lavender" x:Name="Lavender" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Lavender_Clicked"/>
+                            <Button BackgroundColor="Red" x:Name="Red" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Red_Clicked"/>
+                            <Button BackgroundColor="Yellow" x:Name="Yellow" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Yellow_Clicked"/>
+                            <Button BackgroundColor="Orange" x:Name="orange" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Orange_Clicked"/>
+                            <Button BackgroundColor="Teal" x:Name="teal" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Teal_Clicked"/>
+                            <Button BackgroundColor="Brown" x:Name="Brown" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Brown_Clicked"/>
+                            <Button BackgroundColor="Purple" x:Name="purple" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Purple_Clicked"/>
+                        </StackLayout>
+                    </ScrollView>
+                    <ImageButton Source="menuitem.png" HeightRequest="30" WidthRequest="35"  BackgroundColor="White" Clicked="ImageButton_Clicked" />
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

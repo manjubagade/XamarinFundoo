@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FUNDOOAPP.views.Notes" BackgroundColor="White">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="pin_btn" Icon="pin.png"/>
+        <ToolbarItem x:Name="bell_btn" Icon="bell.png"/>
+        <ToolbarItem x:Name="down_btn" Icon="archive.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <RelativeLayout >
+            <StackLayout>
+                <StackLayout >
+                    <Editor  x:Name="title" Placeholder="                          Title                                " 
+                             PlaceholderColor="Gray" FontSize="Large" FontAttributes="Bold" IsSpellCheckEnabled="True" AutoSize="TextChanges" />
+                </StackLayout>
+                <StackLayout>
+                    <Editor  x:Name="notess"  Placeholder="                        Notes                               " 
+                             AutoSize="TextChanges" PlaceholderColor="Olive" FontSize="Large" FontAttributes="Bold" IsSpellCheckEnabled="True"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="End" BackgroundColor="White" 
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
+                
+                <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                    <ImageButton Source="plus.png" BackgroundColor="White"/>
+                    <ScrollView Orientation="Horizontal" BackgroundColor="White">
+                        <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                            <Button BackgroundColor="Aqua" x:Name="Aque" CornerRadius="30"  WidthRequest="35" HeightRequest="35" Clicked="Aque_Clicked"/>
+                            <Button BackgroundColor="DarkGoldenrod" x:Name="DarkGoldenrod" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="DarkGoldenrod_Clicked" />
+                            <Button BackgroundColor="Green" x:Name="Green" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Green_Clicked"/>
+                            <Button BackgroundColor="Gold" x:Name="Gold" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Gold_Clicked" />
+                            <Button BackgroundColor="GreenYellow" x:Name="GreenYellow" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="GreenYellow_Clicked"/>
+                            <Button BackgroundColor="Gray" x:Name="Gray" CornerRadius="30" WidthRequest="35" HeightRequest="35"  Clicked="Gray_Clicked"/>
+                            <Button BackgroundColor="Lavender" x:Name="Lavender" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Lavender_Clicked" />
+                            <Button BackgroundColor="Red" x:Name="Red" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Red_Clicked"/>
+                            <Button BackgroundColor="Yellow" x:Name="Yellow" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Yellow_Clicked"/>
+                            <Button BackgroundColor="Orange" x:Name="orange" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Orange_Clicked"/>
+                            <Button BackgroundColor="Teal" x:Name="teal" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Teal_Clicked"/>
+                            <Button BackgroundColor="Brown" x:Name="Brown" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Brown_Clicked"/>
+                            <Button BackgroundColor="Purple" x:Name="purple" CornerRadius="30" WidthRequest="35" HeightRequest="35" Clicked="Purple_Clicked"/>
+                        </StackLayout>
+                    </ScrollView>
+                    <ImageButton Source="menuitem.png" BackgroundColor="White" Clicked="ImageButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

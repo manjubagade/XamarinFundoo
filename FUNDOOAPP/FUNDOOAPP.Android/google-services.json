@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "201861603154",
+    "firebase_url": "https://fundooapp-810e7.firebaseio.com",
+    "project_id": "fundooapp-810e7",
+    "storage_bucket": "fundooapp-810e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201861603154:android:2af925e04f1c1dfb",
+        "android_client_info": {
+          "package_name": "com.companyname.FUNDOOAPP"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201861603154-ar3nh4vno5chhcq243ir0e5krn7k0872.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWuqYbWNr-jl1gZ2Wf4k6xEQNb2S1_CzM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

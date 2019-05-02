@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FUNDOOAPP.views.Signup" Title="USER REGISTRATION">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,20,10,5"  BackgroundColor="AliceBlue">
+                <StackLayout>
+                    <Label Text="USER REGISTRATION" HorizontalOptions="Center" TextColor="Blue" FontSize="Large"/>
+                </StackLayout>
+                <Label Text="FirstName" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Entry x:Name="first"  Placeholder="LastName" FontSize="Large"  Text="{Binding Signupmodel.FirstName}" />
+                <Label x:Name="Signupmodel_FirstNameError"  IsVisible="False" TextColor="Red" />
+
+                <Label Text="LastName" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Entry x:Name="last"  Placeholder="LastName" FontSize="Large" Text="{Binding Signupmodel.LastName}"  />
+                <Label x:Name="Signupmodel_LastNameError"  IsVisible="False" TextColor="Red" />
+
+                <Label Text="Emailid" TextColor="Black" FontSize="Large" FontAttributes="Bold" />
+                <Entry x:Name="emailid"   Placeholder="email or phone number" FontSize="Large"  Text="{Binding Signupmodel.Emailid}"/>
+                <Label x:Name="Signupmodel_EmailidError"  IsVisible="False" TextColor="Red" />
+
+                <Label Text="Password"  TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Entry x:Name="password"  Placeholder="password" FontSize="Large" IsPassword="True" Text="{Binding Signupmodel.Password}"/>
+                <Label x:Name="Signupmodel_PasswordError"  IsVisible="False" TextColor="Red" />
+
+                <Label Text="ConfirmPassword" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Entry x:Name="cpassword"   Placeholder="Conform Password" FontSize="Large"  IsPassword="True"  Text="{Binding Signupmodel.ConfirmPassword}" />
+                <Label x:Name="Signupmodel_ConfirmPasswordError"  IsVisible="False" TextColor="Red" />
+                <StackLayout >
+                    <Button Text="Submit" BackgroundColor="Navy" IsEnabled="{Binding myBool}" TextColor="White" BorderRadius="23"  Command="{Binding LoginInCommand}"
+                                HeightRequest="46" Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

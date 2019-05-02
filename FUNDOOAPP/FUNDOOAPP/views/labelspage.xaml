@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="FUNDOOAPP.views.labelspage" Title="ALL Labels" BackgroundColor="White" >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <ListView x:Name="lstLabels" SeparatorColor="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <ImageButton Source="labelicon.png" Padding="5,5,10,5" BackgroundColor="White" HorizontalOptions="Start"/>
+                                    <Label Text="{Binding Label}" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                                    <!--<input:CheckBox Text="{Binding key}" Type="Check" Color="White" CheckChanged="CheckBox_CheckChanged" TextColor="White" />-->
+                                    <input:CheckBox Text="{Binding LabelKey}" CheckChanged="CheckBox_CheckChanged_1"  Type="Check" Color="White" TextColor="White" HeightRequest="40" VerticalOptions="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

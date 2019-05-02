@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cardView="clr-namespace:CardViewNetStandard;assembly=CardViewNetStandard"
+             x:Class="FUNDOOAPP.views.Homepage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Searchbar" Text="Search note                     " Priority="0" Clicked="Searchbar_Clicked"/>
+        <ToolbarItem x:Name="Cancel" Order="Primary"  Icon="grids.png" Clicked="Cancel_Clicked"/>
+        <ToolbarItem x:Name="Profile" Icon="manju.png"
+                     Clicked="Profile_Clicked"/>
+        <ToolbarItem x:Name="save"  Text="SIGN OUT"  Icon="sigout.png" Clicked="Save_Clicked" Order="Secondary"/>
+        <ToolbarItem x:Name="Another" Text="ANOTHER ACCOUNT" Order="Secondary" />
+        <ToolbarItem x:Name="Delete" Text="Delete" Order="Secondary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <RelativeLayout> 
+            
+            <ScrollView Orientation="Vertical" VerticalOptions="StartAndExpand" HeightRequest="480">
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="PINNED" FontAttributes="Bold" TextColor="Black"></Label>
+                        <Grid x:Name="GridLayout1"></Grid>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="OTHERS" FontAttributes="Bold" TextColor="Black"></Label>
+                        <Grid x:Name="GridLayout"></Grid>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            
+
+
+            <StackLayout VerticalOptions="End"  BackgroundColor="White"
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
+
+                <StackLayout Orientation="Horizontal" >
+                    <Button Text=" Take a note......"  TextColor="Black"  Clicked="Button_Clicked" BackgroundColor="White"  />
+                    <ImageButton  Source="checking.png" HeightRequest="15" WidthRequest="50" BackgroundColor="White"  Padding="5,10,5,10"/>
+                    <ImageButton Source="pencil.png" HeightRequest="15" WidthRequest="50" BackgroundColor="White" Padding="5,10,5,10" Clicked="ImageButton_Clicked_1"/>
+                    <ImageButton Source="recorder.png" HeightRequest="15" WidthRequest="50" BackgroundColor="White" Padding="5,10,5,10" />
+                    <ImageButton Source="gal.png" HeightRequest="15" WidthRequest="50" BackgroundColor="White" Padding="5,10,5,10" Clicked="ImageButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>   
+    </ContentPage.Content>
+</ContentPage>

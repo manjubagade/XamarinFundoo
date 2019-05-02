@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FUNDOOAPP.views.Labels">
+    <StackLayout BackgroundColor="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton Source="cross.png" Grid.Row="0" Grid.Column="0" WidthRequest="5" HeightRequest="5" BackgroundColor="White" Padding="10,10,15,10"/>
+            <Entry x:Name="txtLabel" Grid.Row="0"  Grid.Column="1" Grid.ColumnSpan="3" Placeholder="Create new label" BackgroundColor="White" />
+            <ImageButton Source="tick1.png" Grid.Row="0" Grid.Column="4" Padding="10,10,15,10" BackgroundColor="White" Clicked="ImageButton_Clicked"/>
+        </Grid>
+        <StackLayout HorizontalOptions="Center">
+            <ListView x:Name="lstLabels" IsPullToRefreshEnabled="True" RowHeight="55"
+                     SeparatorColor="Transparent" ItemSelected="LstLabels_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White" x:Name="labelLayout">
+                                <ImageButton Source="labelicon.png"  BackgroundColor="White" Padding="5,5,10,5"/>
+                                <Label Text="{Binding Label}" HorizontalOptions="CenterAndExpand" TextColor="Black" BackgroundColor="White"></Label>
+                                <Label Text="{Binding LabelKey}" IsVisible="False"/>
+                                <ImageButton Source="labelediticon.png" BackgroundColor="White"  Padding="5,5,10,5"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
