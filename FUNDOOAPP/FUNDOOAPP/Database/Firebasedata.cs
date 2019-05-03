@@ -140,9 +140,9 @@ namespace FUNDOOAPP.Database
             {
                 Title = note.Title,
                 Notes = note.Notes,
-                LabelsList=note.LabelsList,
-                noteType=note.noteType,
-                ColorNote=note.ColorNote
+                LabelsList = note.LabelsList,
+                noteType = note.noteType,
+                ColorNote = note.ColorNote
             });
         }
     }

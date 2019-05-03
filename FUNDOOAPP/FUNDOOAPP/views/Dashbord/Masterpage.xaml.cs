@@ -8,6 +8,7 @@ namespace FUNDOOAPP.views.Dashbord
     using System;
     using System.Collections.Generic;
     using FUNDOOAPP.Models;
+    using FUNDOOAPP.Repository;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -24,6 +25,18 @@ namespace FUNDOOAPP.views.Dashbord
         public Masterpage()
         {
             this.InitializeComponent();
+            //var imgsource = new UriImageSource { Uri = new Uri("https://firebasestorage.googleapis.com/v0/b/fundooapp-810e7.appspot.com/o/XamarinMonkeys%2Fimage.jpg?alt=media&token=70743c7b-b1c7-472e-8af4-58c13b2da0ef") };
+            //imgsource.CachingEnabled = false;
+            //ProfilePic.Source = imgsource;
+            //ProfilePic.HeightRequest = 100;
+            //ProfilePic.WidthRequest = 100;
+            OnAppearing();
+            var userImage = new TapGestureRecognizer();
+            //// Binding events 
+            userImage.Tapped += this.userImage_Tapped;
+            ///// Associating tap events to the image buttons    
+            ProfilePic.GestureRecognizers.Add(userImage);
+
             this.MenuList = new List<MasterPageItem>();
             this.MenuList.Add(new MasterPageItem() { Title = "Notes", Icon = "keep.png", TargetType = typeof(Homepage) });
             this.MenuList.Add(new MasterPageItem() { Title = "Reminders", Icon = "rem.png", TargetType = typeof(Reminder) });
@@ -54,6 +67,38 @@ namespace FUNDOOAPP.views.Dashbord
             Type page = item.TargetType;
             this.Detail = new NavigationPage((Page)Activator.CreateInstance(page));
             this.IsPresented = false;
+        }
+
+        private async void userImage_Tapped(object sender, EventArgs e)
+        {
+          await  Navigation.PushModalAsync(new gallarypermition());
+        }
+
+        protected  async override void OnAppearing()
+        {
+            UserRepository userRepository = new UserRepository();
+            User user = await userRepository.GetUserById();
+            if (user.Imageurl != null)
+            {
+                var imgsource = new UriImageSource { Uri = new 
+                    Uri(user.Imageurl) };
+                imgsource.CachingEnabled = false;
+                ProfilePic.Source = imgsource;
+                ProfilePic.HeightRequest = 70;
+                ProfilePic.WidthRequest = 70;
+            }
+            //else
+            //{
+            //    var imagess = new UriImageSource
+            //    {
+            //        Uri =new Uri("")
+            //    };
+            //    imagess.CachingEnabled = false;
+            //    ProfilePic.Source = imagess;
+            //    ProfilePic.HeightRequest = 70;
+            //    ProfilePic.WidthRequest = 70;
+            //}
+            base.OnAppearing();
         }
     }
 }

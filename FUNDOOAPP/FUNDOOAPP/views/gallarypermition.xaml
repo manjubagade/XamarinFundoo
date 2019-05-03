@@ -6,8 +6,8 @@
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
             <Image x:Name="imgBanner"></Image>
             <Image x:Name="imgChoosed" HeightRequest="200"></Image>
-            <Button x:Name="btnPick" Text="Pick" Clicked="btnPick_Clicked"></Button>
-            <Button x:Name="btnStore" Text="Store" Clicked="btnStore_Clicked"></Button>
+            <Button x:Name="btnPick" Text="Choose File" Clicked="btnPick_Clicked"></Button>
+            <Button x:Name="btnStore" Text="Upload Profile" Clicked="btnStore_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

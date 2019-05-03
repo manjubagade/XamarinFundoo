@@ -25,7 +25,14 @@ namespace FUNDOOAPP.views
     /// <seealso cref="Xamarin.Forms.ContentPage" />
     public partial class Delete : ContentPage
     {
+        /// <summary>
+        /// The firebase
+        /// </summary>
         private Firebasedata firebase = new Firebasedata();
+
+        /// <summary>
+        /// The notes repository
+        /// </summary>
         NotesRepository notesRepository = new NotesRepository();
 
         /// <summary>

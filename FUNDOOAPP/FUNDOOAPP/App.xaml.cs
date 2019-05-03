@@ -17,7 +17,6 @@ namespace FUNDOOAPP
     /// <seealso cref="Xamarin.Forms.Application" />
     public partial class App : Application
     {
-
         public static double ScreenWidth;
         public static double ScreenHeight;
         /// <summary>
@@ -26,10 +25,7 @@ namespace FUNDOOAPP
         public App()
         {
             this.InitializeComponent();
-            this.MainPage = new NavigationPage(new Login()) {
-                BarBackgroundColor=Color.White,
-                BarTextColor= Color.White
-            };
+            this.MainPage = new NavigationPage(new Login());        
         }
 
         /// <summary>

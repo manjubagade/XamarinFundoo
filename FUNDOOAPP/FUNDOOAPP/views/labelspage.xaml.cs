@@ -20,17 +20,29 @@ namespace FUNDOOAPP.views
     public partial class labelspage : ContentPage
     {
         string uid = DependencyService.Get<IFirebaseAuthenticator>().User();
+
+        /// <summary>
+        /// The notes repository
+        /// </summary>
         NotesRepository notesRepository = new NotesRepository();
+
+        /// <summary>
+        /// The note key
+        /// </summary>
         private string noteKey = string.Empty;
         /// <summary>
         /// Initializes a new instance of the <see cref="labelspage"/> class.
         /// </summary>
         public labelspage(string labelkeys)
         {
-            noteKey = labelkeys;
+            this.noteKey = labelkeys;
             this.InitializeComponent();
         }
-        Firebasedata firebasedata = new Firebasedata();
+
+        /// <summary>
+        /// The firebasedata
+        /// </summary>
+       private Firebasedata firebasedata = new Firebasedata();
 
         /// <summary>
         /// When overridden, allows application developers to customize behavior immediately prior to the <see cref="T:Xamarin.Forms.Page" /> becoming visible.
@@ -71,6 +83,11 @@ namespace FUNDOOAPP.views
             }
         }
 
+        /// <summary>
+        /// Handles the 1 event of the CheckBox_CheckChanged control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private async void CheckBox_CheckChanged_1(object sender, EventArgs e)
         {
             var checkbox = (CheckBox)sender;
@@ -78,17 +95,16 @@ namespace FUNDOOAPP.views
             {
                 checkbox.Color = Color.Black;
                 var labKey = checkbox.Text;
-                var getnode = await notesRepository.GetNoteByKeyAsync(noteKey, uid);
+                var getnode = await this.notesRepository.GetNoteByKeyAsync(this.noteKey, this.uid);
                 getnode.LabelsList.Add(labKey);
                 Note note = new Note
                 {
-                    Title=getnode.Title,
-                    Notes=getnode.Notes,
-                    ColorNote=getnode.ColorNote,
-                    LabelsList=getnode.LabelsList
+                    Title = getnode.Title,
+                    Notes = getnode.Notes,
+                    ColorNote = getnode.ColorNote,
+                    LabelsList = getnode.LabelsList
                 };
-                
-                   firebasedata.Updatelabelstonotes(noteKey, note);
+                   this.firebasedata.Updatelabelstonotes(this.noteKey, note);
             }
         }
     }

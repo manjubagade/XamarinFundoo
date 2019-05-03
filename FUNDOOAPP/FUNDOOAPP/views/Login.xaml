@@ -4,31 +4,70 @@
              x:Class="FUNDOOAPP.views.Login">
     <ContentPage.Content>
         <StackLayout Padding="10,20,10,5">
-            <Label Text="FUNDOO APP" FontAttributes="Bold" FontSize="Large" Style="{DynamicResource FundooApp}"
-                HorizontalOptions="CenterAndExpand" TextColor="Black"/>
-            <Image Source="logo" HeightRequest="60" WidthRequest="100"></Image>
+            <Label Text="FUNDOO APP" 
+                   FontAttributes="Bold" 
+                   FontSize="Large" 
+                   Style="{DynamicResource FundooApp}"
+                HorizontalOptions="CenterAndExpand" 
+                   TextColor="Black"/>
+            <Image Source="logo" 
+                   HeightRequest="60" 
+                   WidthRequest="100"></Image>
             <Label Text="E-mails"/>
-            <Entry x:Name="username"  Placeholder="Enter your mail..."  />
+            <Entry x:Name="username"  
+                   Placeholder="Enter your mail..."  />
             <Label Text="password"/>
-            <Entry x:Name="upassword"  IsPassword="True" Placeholder="Enter your password..." />
+            <Entry x:Name="upassword"  
+                   IsPassword="True" 
+                   Placeholder="Enter your password..." />
 
             <StackLayout HorizontalOptions="Center">
                 <AbsoluteLayout>
-                    <ActivityIndicator x:Name="loading" IsEnabled="False" IsRunning="False" IsVisible="False" BackgroundColor="Transparent"
+                    <ActivityIndicator 
+                        x:Name="loading" 
+                        IsEnabled="False" 
+                        IsRunning="False" 
+                        IsVisible="False" 
+                        BackgroundColor="Transparent"
                                             Color="DarkBlue"/>
                 </AbsoluteLayout>
             </StackLayout>
             <StackLayout>
-                <Button x:Name="BtnClick" BackgroundColor="Navy" Text="log in" TextColor="White" HeightRequest="46" BorderRadius="23" 
+                <Button x:Name="BtnClick"
+                        BackgroundColor="Navy" 
+                        Text="log in" 
+                        TextColor="White"
+                        HeightRequest="46" 
+                        BorderRadius="23" 
                         Clicked="Click_hanndle1"  >
                 </Button>
-                <Button BackgroundColor="Purple" Text="Register" TextColor="White" HeightRequest="46" BorderRadius="23" Clicked="Click_hanndle"/>
-                <Button Text="Forgot password" TextColor="White" BackgroundColor="DarkGreen"  HeightRequest="46" BorderRadius="23" Clicked="Button_Clicked"/>
+                <Button BackgroundColor="Purple" 
+                        Text="Register" 
+                        TextColor="White" 
+                        HeightRequest="46"
+                        BorderRadius="23" 
+                        Clicked="Click_hanndle"/>
+                <Button Text="Forgot password" 
+                        TextColor="White" 
+                        BackgroundColor="DarkGreen"  
+                        HeightRequest="46" 
+                        BorderRadius="23" 
+                        Clicked="Button_Clicked"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <ImageButton Source="Face_logo" WidthRequest="80" HeightRequest="40" BackgroundColor="White"/>
-                <ImageButton Source="Instagram" WidthRequest="80" HeightRequest="40" BackgroundColor="White"/>
-                <ImageButton Source="google" WidthRequest="80" HeightRequest="40" BackgroundColor="White"/>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center">
+                <ImageButton Source="Face_logo" 
+                             WidthRequest="80" 
+                             HeightRequest="40" 
+                             BackgroundColor="White"/>
+                <ImageButton Source="Instagram"
+                             WidthRequest="80" 
+                             HeightRequest="40" 
+                             BackgroundColor="White"/>
+                <ImageButton Source="google" 
+                             WidthRequest="80" 
+                             HeightRequest="40"
+                             BackgroundColor="White"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

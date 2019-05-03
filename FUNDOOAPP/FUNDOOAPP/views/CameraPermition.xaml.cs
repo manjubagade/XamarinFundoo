@@ -47,9 +47,7 @@ namespace FUNDOOAPP.views
                 });
                 if (file == null)
                     return;
-
                 await this.DisplayAlert("file path", file.Path, "ok");
-
                 MyImage.Source = ImageSource.FromStream(() =>
                 {
                     var steam = file.GetStream();

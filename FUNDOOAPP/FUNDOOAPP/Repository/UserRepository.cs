@@ -14,6 +14,7 @@ namespace FUNDOOAPP.Repository
     using Firebase.Database.Query;
     using FUNDOOAPP.Interfaces;
     using FUNDOOAPP.Models;
+    using Plugin.Toast;
     using Xamarin.Forms;
 
     /// <summary>
@@ -44,6 +45,7 @@ namespace FUNDOOAPP.Repository
                 {
                     await this.firebaseclient.Child("User").Child(uid).Child("Userinfo").PostAsync<User>(new User() { FirstName = firstName, LastName = lastName });
                 }
+
                 return uid;
             }
             catch (Exception ex)
@@ -53,16 +55,27 @@ namespace FUNDOOAPP.Repository
             }  
         }
 
+        /// <summary>
+        /// Getimages the souce.
+        /// </summary>
+        /// <param name="imagesouce">The imagesouce.</param>
+        /// <returns>return task</returns>
         public async Task GetimageSouce(string imagesouce)
         {
             string uid =  DependencyService.Get<IFirebaseAuthenticator>().User();
             User user = await this.GetUserById();
-            if(uid != null && user != null)
+            if (uid != null && user != null)
             {
                     await firebaseclient.Child("User").Child(uid).Child("Userinfo").PutAsync<User>(new User() { FirstName = user.FirstName, LastName = user.LastName, Imageurl = imagesouce });
             }
+
+            CrossToastPopUp.Current.ShowToastMessage("Profile Picure Uploaded Successfully");
         }
 
+        /// <summary>
+        /// Gets the user by identifier.
+        /// </summary>
+        /// <returns>return task</returns>
         public async Task<User> GetUserById()
         {
             try
@@ -75,7 +88,7 @@ namespace FUNDOOAPP.Repository
                     return user;
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 return null;
             }

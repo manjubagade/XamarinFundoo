@@ -75,6 +75,11 @@ namespace FUNDOOAPP.views
             }
         }
 
+        /// <summary>
+        /// Handles the ItemSelected event of the LstLabels control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="SelectedItemChangedEventArgs"/> instance containing the event data.</param>
         private void LstLabels_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var entity = (LabelNotes)e.SelectedItem;

@@ -6,15 +6,25 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <ListView x:Name="lstLabels" SeparatorColor="Transparent">
+                <ListView x:Name="lstLabels" 
+                          SeparatorColor="Transparent">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal">
-                                    <ImageButton Source="labelicon.png" Padding="5,5,10,5" BackgroundColor="White" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding Label}" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                                    <ImageButton Source="labelicon.png" 
+                                                 Padding="5,5,10,5" 
+                                                 BackgroundColor="White" 
+                                                 HorizontalOptions="Start"/>
+                                    <Label Text="{Binding Label}" 
+                                           HorizontalOptions="CenterAndExpand" 
+                                           TextColor="Black"/>
                                     <!--<input:CheckBox Text="{Binding key}" Type="Check" Color="White" CheckChanged="CheckBox_CheckChanged" TextColor="White" />-->
-                                    <input:CheckBox Text="{Binding LabelKey}" CheckChanged="CheckBox_CheckChanged_1"  Type="Check" Color="White" TextColor="White" HeightRequest="40" VerticalOptions="Center"/>
+                                    <input:CheckBox Text="{Binding LabelKey}" 
+                                                    CheckChanged="CheckBox_CheckChanged_1"  
+                                                    Type="Check" Color="White" 
+                                                    TextColor="White" HeightRequest="40" 
+                                                    VerticalOptions="Center"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

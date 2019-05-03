@@ -6,8 +6,7 @@ using Xamarin.Forms;
 
 namespace FUNDOOAPP.ViewModel
 {
-    class FrameColorSetter :ContentPage
-
+    class FrameColorSetter : ContentPage
     {
         public static void GetColor(Note note, Frame frame)
         {
@@ -64,12 +63,12 @@ namespace FUNDOOAPP.ViewModel
                 frame.BackgroundColor = Color.White;
                 return;
             }
-            if(note.ColorNote.Equals("Green"))
+            if (note.ColorNote.Equals("Green"))
             {
                 frame.BackgroundColor = Color.Green;
                 return;
             }
-            if(note.ColorNote.Equals("Yellow"))
+            if (note.ColorNote.Equals("Yellow"))
             {
                 frame.BackgroundColor = Color.Yellow;
                 return;
@@ -94,8 +93,13 @@ namespace FUNDOOAPP.ViewModel
                 frame.BackgroundColor = Color.Brown;
                 return;
             }
-
         }
+
+        /// <summary>
+        /// Gets the color of the hexadecimal.
+        /// </summary>
+        /// <param name="note">The note.</param>
+        /// <returns></returns>
         public static string GetHexColor(Note note)
         {
             if (note.ColorNote.Equals("Green"))
@@ -105,43 +109,36 @@ namespace FUNDOOAPP.ViewModel
 
             if (note.ColorNote.Equals("Aqua"))
             {
-
                 return "00ffff";
             }
 
             if (note.ColorNote.Equals("DarkGoldenrod"))
             {
-
                 return "b8860b";
             }
 
             if (note.ColorNote.Equals("Gold"))
             {
-
                 return "ffd700";
             }
 
             if (note.ColorNote.Equals("GreenYellow"))
             {
-
                 return "adff2f";
             }
 
             if (note.ColorNote.Equals("Gray"))
             {
-
                 return "808080";
             }
 
             if (note.ColorNote.Equals("Lavender"))
             {
-
                 return "e6e6fa";
             }
 
             if (note.ColorNote.Equals("MintCream"))
             {
-
                 return "f5fffa";
             }
 

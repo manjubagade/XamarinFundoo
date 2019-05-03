@@ -5,13 +5,13 @@
 //-----------------------------------------------------------------------
 namespace FUNDOOAPP.views
 {
+    using System;
+    using System.Collections.Generic;
     using FUNDOOAPP.Database;
     using FUNDOOAPP.Interfaces;
     using FUNDOOAPP.Models;
     using FUNDOOAPP.Repository;
     using FUNDOOAPP.ViewModel;
-    using System;
-    using System.Collections.Generic;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
     using static FUNDOOAPP.DataFile.Enum;
@@ -32,8 +32,22 @@ namespace FUNDOOAPP.views
             this.InitializeComponent();
         }
 
+        /// <summary>
+        /// The firebase
+        /// </summary>
         private Firebasedata firebase = new Firebasedata();
-        NotesRepository noteRepository = new NotesRepository();
+
+        /// <summary>
+        /// The note repository
+        /// </summary>
+       private  NotesRepository noteRepository = new NotesRepository();
+
+        /// <summary>
+        /// When overridden, allows application developers to customize behavior immediately prior to the <see cref="T:Xamarin.Forms.Page" /> becoming visible.
+        /// </summary>
+        /// <remarks>
+        /// To be added.
+        /// </remarks>
         protected async override void OnAppearing()
         {
             /// Calls run time service from respective device (Android, iOS, UWP) to get current user 
@@ -164,8 +178,6 @@ namespace FUNDOOAPP.views
                                 }
                             }
                         }
-
-
                         tapGestureRecognizer.Tapped += (object sender, EventArgs args) =>
                         {
                             StackLayout layout123 = (StackLayout)sender;
@@ -185,6 +197,11 @@ namespace FUNDOOAPP.views
             }
         }
 
+        /// <summary>
+        /// Converts to olbaritem_clicked.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ListViewNote());
