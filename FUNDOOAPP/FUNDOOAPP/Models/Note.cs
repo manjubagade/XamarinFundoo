@@ -55,8 +55,20 @@ namespace FUNDOOAPP.Models
         /// </value>
         public string DateTime { get; set; }
 
+        /// <summary>
+        /// Gets or sets the color note.
+        /// </summary>
+        /// <value>
+        /// The color note.
+        /// </value>
         public string ColorNote { get; set; }
 
+        /// <summary>
+        /// Gets or sets the labels list.
+        /// </summary>
+        /// <value>
+        /// The labels list.
+        /// </value>
         public IList<string> LabelsList { get; set; } = new List<string>();
     }
 }

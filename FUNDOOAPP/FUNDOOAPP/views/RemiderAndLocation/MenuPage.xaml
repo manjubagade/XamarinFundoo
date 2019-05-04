@@ -42,31 +42,105 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <ImageButton Source="delete.png" Grid.Row="0" Grid.Column="0"   BackgroundColor="White" />
-            <Button Text ="delete" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="8" FontSize="Small"  BackgroundColor="White" Clicked="Button_Clicked"/>
+            <ImageButton Source="delete.png" 
+                         Grid.Row="0" 
+                         Grid.Column="0"   
+                         BackgroundColor="White" />
+            <Button Text ="delete"
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="8" 
+                    FontSize="Small"  
+                    BackgroundColor="White" 
+                    Clicked="Button_Clicked"/>
 
-            <ImageButton Source="copy.png" Grid.Row="1" Grid.Column="0"  BackgroundColor="White"/>
-            <Button Text ="Make a copy" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="8"  FontSize="Small" BackgroundColor="White" />
+            <ImageButton Source="copy.png" 
+                         Grid.Row="1" 
+                         Grid.Column="0"  
+                         BackgroundColor="White"/>
+            <Button Text ="Make a copy" 
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="8"  
+                    FontSize="Small" 
+                    BackgroundColor="White" />
 
-            <ImageButton Source="shareit.png" Grid.Row="2" Grid.Column="0"  BackgroundColor="White"/>
-            <Button Text ="Send" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="8" FontSize="Small" BackgroundColor="White" Clicked="Button_Clicked_1" />
+            <ImageButton Source="shareit.png" 
+                         Grid.Row="2" 
+                         Grid.Column="0"  
+                         BackgroundColor="White"/>
+            <Button Text ="Send" 
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="8" 
+                    FontSize="Small" 
+                    BackgroundColor="White" 
+                    Clicked="Button_Clicked_1" />
 
-            <ImageButton Source="user.png" Grid.Row="3" Grid.Column="0"  BackgroundColor="White"/>
-            <Button Text ="Collaborator" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="8" FontSize="Small" BackgroundColor="White"/>
+            <ImageButton Source="user.png" 
+                         Grid.Row="3" 
+                         Grid.Column="0" 
+                         BackgroundColor="White"/>
+            <Button Text ="Collaborator"
+                    Grid.Row="3" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="8" 
+                    FontSize="Small" 
+                    BackgroundColor="White"/>
 
-            <ImageButton Source="labelicon.png" Grid.Row="4" Grid.Column="0"  BackgroundColor="White"/>
-            <Button Text ="Labels" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="8" FontSize="Small" BackgroundColor="White" Clicked="Button_Clicked_2"/>
-            <ScrollView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="9" Orientation="Horizontal" BackgroundColor="White">
+            <ImageButton Source="labelicon.png" 
+                         Grid.Row="4"
+                         Grid.Column="0"  
+                         BackgroundColor="White"/>
+            <Button Text ="Labels" 
+                    Grid.Row="4" 
+                    Grid.Column="1"
+                    Grid.ColumnSpan="8" 
+                    FontSize="Small" 
+                    BackgroundColor="White" 
+                    Clicked="Button_Clicked_2"/>
+            <ScrollView Grid.Row="5" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="9" 
+                        Orientation="Horizontal"
+                        BackgroundColor="White">
                 <StackLayout Orientation="Horizontal">
-                    <Button BackgroundColor="Aqua" CornerRadius="30"  WidthRequest="50" HeightRequest="20" />
-                    <Button BackgroundColor="DarkGoldenrod" CornerRadius="30" WidthRequest="50" HeightRequest="20" />
-                    <Button BackgroundColor="Green" CornerRadius="30" WidthRequest="50" HeightRequest="20" />
-                    <Button BackgroundColor="Gold" CornerRadius="30" WidthRequest="50" HeightRequest="20" />
-                    <Button BackgroundColor="GreenYellow" CornerRadius="30" WidthRequest="50" HeightRequest="20" />
-                    <Button BackgroundColor="Gray" CornerRadius="30" WidthRequest="50" HeightRequest="20" />
-                    <Button BackgroundColor="Lavender" CornerRadius="30" WidthRequest="50" HeightRequest="20" />
-                    <Button BackgroundColor="MintCream" CornerRadius="30" WidthRequest="50" HeightRequest="20" />
-                    <Button BackgroundColor="Yellow" CornerRadius="30" WidthRequest="50" HeightRequest="20"/>
+                    <Button BackgroundColor="Aqua"
+                            CornerRadius="30" 
+                            WidthRequest="50" 
+                            HeightRequest="20" />
+                    <Button BackgroundColor="DarkGoldenrod" 
+                            CornerRadius="30" 
+                            WidthRequest="50" 
+                            HeightRequest="20" />
+                    <Button BackgroundColor="Green" 
+                            CornerRadius="30" 
+                            WidthRequest="50" 
+                            HeightRequest="20" />
+                    <Button BackgroundColor="Gold" 
+                            CornerRadius="30"
+                            WidthRequest="50" 
+                            HeightRequest="20" />
+                    <Button BackgroundColor="GreenYellow" 
+                            CornerRadius="30" 
+                            WidthRequest="50" 
+                            HeightRequest="20" />
+                    <Button BackgroundColor="Gray" 
+                            CornerRadius="30" 
+                            WidthRequest="50" 
+                            HeightRequest="20" />
+                    <Button BackgroundColor="Lavender" 
+                            CornerRadius="30" 
+                            WidthRequest="50" 
+                            HeightRequest="20" />
+                    <Button BackgroundColor="MintCream" 
+                            CornerRadius="30" 
+                            WidthRequest="50" 
+                            HeightRequest="20" />
+                    <Button BackgroundColor="Yellow" 
+                            CornerRadius="30" 
+                            WidthRequest="50" 
+                            HeightRequest="20"/>
                 </StackLayout>
             </ScrollView>
         </Grid>

@@ -29,7 +29,7 @@
                         IsRunning="False" 
                         IsVisible="False" 
                         BackgroundColor="Transparent"
-                                            Color="DarkBlue"/>
+                        Color="DarkBlue"/>
                 </AbsoluteLayout>
             </StackLayout>
             <StackLayout>

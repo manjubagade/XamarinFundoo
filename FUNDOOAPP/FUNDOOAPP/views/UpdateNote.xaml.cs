@@ -190,6 +190,7 @@ namespace FUNDOOAPP.views
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
             PopupNavigation.Instance.PushAsync(new MenuPage(this.noteKeys));
+            Navigation.RemovePage(this);
         }
 
         /// <summary>
@@ -537,4 +538,4 @@ namespace FUNDOOAPP.views
             this.LableFrames(list);
         }
     } 
-} 
+}

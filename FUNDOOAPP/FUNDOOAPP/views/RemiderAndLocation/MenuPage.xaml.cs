@@ -66,7 +66,8 @@ namespace FUNDOOAPP.views.RemiderAndLocation
                 note.noteType = NoteType.isTrash;
                 await this.notesRepository.UpdateNoteAsync(note, this.noteKeys, uid);
                 await Navigation.PushModalAsync(new Masterpage());
-                await PopupNavigation.Instance.PopAsync();
+                 //Navigation.RemovePage(this);
+                await PopupNavigation.Instance.PopAsync(); 
                 CrossToastPopUp.Current.ShowToastMessage("Note Moved to Trash");
             }
             catch (Exception ex)
@@ -81,8 +82,7 @@ namespace FUNDOOAPP.views.RemiderAndLocation
         public async void UpdateNotes()
         {
             string uid = DependencyService.Get<IFirebaseAuthenticator>().User();
-            Note note = await this.notesRepository.GetNoteByKeyAsync(this.noteKeys, uid);
-            
+            Note note = await this.notesRepository.GetNoteByKeyAsync(this.noteKeys, uid);     
         }
 
         /// <summary>

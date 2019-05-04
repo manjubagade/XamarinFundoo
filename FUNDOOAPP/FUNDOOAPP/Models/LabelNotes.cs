@@ -18,7 +18,12 @@ namespace FUNDOOAPP.Models
         /// </value>
         public string Label { get; set; }
 
-
+        /// <summary>
+        /// Gets or sets the label key.
+        /// </summary>
+        /// <value>
+        /// The label key.
+        /// </value>
         public string LabelKey { get; set; }
     }
 }

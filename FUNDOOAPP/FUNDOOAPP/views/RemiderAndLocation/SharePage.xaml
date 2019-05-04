@@ -23,12 +23,36 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label Text=" add image" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" TextColor="Black" FontAttributes="Bold"/>
-            <ImageButton Source="camera.png" Grid.Row="1" Grid.Column="0"   BackgroundColor="White"  x:Name="MyImage"/>
-            <Button  Text ="Take photo" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="8" FontSize="Small"  BackgroundColor="White" Clicked="Button_Clicked_1" />
+            <Label Text=" add image" 
+                   Grid.Row="0" 
+                   Grid.Column="0" 
+                   Grid.ColumnSpan="5" 
+                   TextColor="Black" 
+                   FontAttributes="Bold"/>
+            <ImageButton Source="camera.png" 
+                         Grid.Row="1" 
+                         Grid.Column="0"   
+                         BackgroundColor="White"  
+                         x:Name="MyImage"/>
+            <Button  Text ="Take photo" 
+                     Grid.Row="1" 
+                     Grid.Column="1" 
+                     Grid.ColumnSpan="8" 
+                     FontSize="Small"  
+                     BackgroundColor="White" 
+                     Clicked="Button_Clicked_1" />
 
-            <ImageButton Source="gal.png" Grid.Row="2" Grid.Column="0"  BackgroundColor="White"/>
-            <Button Text ="Choose image" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="8"  FontSize="Small" BackgroundColor="White" Clicked="Button_Clicked"/>
+            <ImageButton Source="gal.png" 
+                         Grid.Row="2" 
+                         Grid.Column="0"  
+                         BackgroundColor="White"/>
+            <Button Text ="Choose image" 
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    Grid.ColumnSpan="8" 
+                    FontSize="Small" 
+                    BackgroundColor="White"
+                    Clicked="Button_Clicked"/>
     
         </Grid>
     </StackLayout>

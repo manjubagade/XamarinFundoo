@@ -55,7 +55,12 @@ namespace FUNDOOAPP.Database
         {
             await this.firebase
               .Child("User")
-              .PostAsync(new Register() { Firstname = firstname, Lastname = lastname, Emailid = emailid, Password = password, Cpassword = cpassword });
+              .PostAsync(new Register() {
+                  Firstname = firstname,
+                  Lastname = lastname,
+                  Emailid = emailid,
+                  Password = password,
+                  Cpassword = cpassword });
         }
 
         /// <summary>
@@ -70,7 +75,8 @@ namespace FUNDOOAPP.Database
             await this.firebase
               .Child("Persons")
               .OnceAsync<Register>();
-            return allPersons.Where(a => a.Emailid == emailid && a.Password == password).FirstOrDefault();
+            return allPersons.Where(a => a.Emailid == emailid && 
+                                         a.Password == password).FirstOrDefault();
         }
 
         /// <summary>
@@ -95,7 +101,10 @@ namespace FUNDOOAPP.Database
         public async Task CreateLabel(string label)
         {
             var userid = DependencyService.Get<IFirebaseAuthenticator>().User();
-            await this.firebase.Child("User").Child(userid).Child("Lab").PostAsync(new LabelNotes { Label = label });
+            await this.firebase.Child("User").Child(userid).Child("Lab").PostAsync(new  LabelNotes
+            {
+                Label = label
+            });
         }
 
         /// <summary>
@@ -111,10 +120,15 @@ namespace FUNDOOAPP.Database
               {
                   Label = item.Object.Label,
                   LabelKey = item.Key
-
               }).ToList();
         }
 
+        /// <summary>
+        /// Gets the label.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <param name="uid">The uid.</param>
+        /// <returns></returns>
         public async Task<LabelNotes> GetLabel(string key, string uid)
         {
             LabelNotes labelNotes = await this.firebase.Child("User").Child(uid).Child("Lab").Child(key).OnceSingleAsync<LabelNotes>();

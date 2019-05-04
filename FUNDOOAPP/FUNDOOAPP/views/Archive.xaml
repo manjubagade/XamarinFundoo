@@ -8,7 +8,9 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <ScrollView Orientation="Vertical" VerticalOptions="StartAndExpand" HeightRequest="480">
+            <ScrollView Orientation="Vertical" 
+                        VerticalOptions="StartAndExpand"
+                        HeightRequest="480">
                 <Grid x:Name="GridLayout"></Grid>
             </ScrollView>
         </StackLayout>

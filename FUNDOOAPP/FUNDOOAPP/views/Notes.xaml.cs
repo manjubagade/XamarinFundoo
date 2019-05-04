@@ -82,89 +82,164 @@ namespace FUNDOOAPP.views
             CrossToastPopUp.Current.ShowToastMessage("Notes Created");
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Button control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Button_Clicked(object sender, EventArgs e)
         {
             BackgroundColor = Color.Red;
             this.noteBackGroundColor = "Red";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the ImageButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
            await PopupNavigation.Instance.PushAsync(new Popupmenupage());
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Aque control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Aque_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Aqua;
             this.noteBackGroundColor = "Aqua";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the DarkGoldenrod control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void DarkGoldenrod_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.DarkGoldenrod;
             this.noteBackGroundColor = "DarkGoldenrod";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Green control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Green_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Green;
             this.noteBackGroundColor = "Green";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Gold control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Gold_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Gold;
             this.noteBackGroundColor = "Gold";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the GreenYellow control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void GreenYellow_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.GreenYellow;
             this.noteBackGroundColor = "GreenYellow";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Gray control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Gray_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Gray;
             this.noteBackGroundColor = "Gray";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Lavender control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Lavender_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Lavender;
             this.noteBackGroundColor = "Lavender";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Red control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Red_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Red;
             this.noteBackGroundColor = "Red";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Yellow control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Yellow_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Yellow;
             this.noteBackGroundColor = "Yellow";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Orange control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Orange_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Orange;
             this.noteBackGroundColor = "Orange";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Teal control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Teal_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Teal;
             this.noteBackGroundColor = "Teal";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Brown control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Brown_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Brown;
             this.noteBackGroundColor = "Brown";
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Purple control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Purple_Clicked(object sender, EventArgs e)
         {
             this.BackgroundColor = Color.Purple;

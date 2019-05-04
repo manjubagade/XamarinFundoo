@@ -246,6 +246,11 @@ namespace FUNDOOAPP.views
         }
         double x, y;
 
+        /// <summary>
+        /// Called when [pan updated].
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="PanUpdatedEventArgs"/> instance containing the event data.</param>
         void OnPanUpdated(object sender, PanUpdatedEventArgs e)
         {
             switch (e.StatusType)
@@ -275,8 +280,6 @@ namespace FUNDOOAPP.views
         {
             try
             {
-
-
                 var uid = DependencyService.Get<IFirebaseAuthenticator>().User();
                 var notes = await this.notesRepository.GetNotesAsync(uid);               
                 IList<Note> listNote = new List<Note>();
@@ -313,28 +316,52 @@ namespace FUNDOOAPP.views
             }
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Cancel control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private async void Cancel_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ListViewNote());
              this.Navigation.RemovePage(this);
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the ImageButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new SharePage());
             //await Navigation.PushAsync(new CameraPermition());
         }
 
+        /// <summary>
+        /// Handles the 1 event of the ImageButton_Clicked control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private async void ImageButton_Clicked_1(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Drawingpage());
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Searchbar control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private async void Searchbar_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new FindNotes());
         }
 
+        /// <summary>
+        /// Notes the grid pin.
+        /// </summary>
+        /// <param name="listpin">The listpin.</param>
         public void NoteGridPin(IList<Note> listpin)
         {
             try

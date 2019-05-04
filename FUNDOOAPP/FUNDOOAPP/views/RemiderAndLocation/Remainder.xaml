@@ -31,12 +31,36 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Text="Time" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" FontAttributes="Bold" FontSize="25"/>
-            <DatePicker x:Name="datepicker" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="8"/>
-            <TimePicker x:Name="timepicker" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="8"/>
-            <Picker x:Name="mypicker" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="8" />
-            <Button Text="Cancel" x:Name="Cencel" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Clicked="Cencel_Clicked"/>
-            <Button Text="Save" x:Name="Save" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="3" Clicked="Save_Clicked"/>
+            <Label Text="Time" 
+                   Grid.Row="0" 
+                   Grid.Column="0" 
+                   Grid.ColumnSpan="5" 
+                   FontAttributes="Bold" 
+                   FontSize="25"/>
+            <DatePicker x:Name="datepicker"
+                        Grid.Row="1" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="8"/>
+            <TimePicker x:Name="timepicker" 
+                        Grid.Row="2" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="8"/>
+            <Picker x:Name="mypicker"
+                    Grid.Row="3" 
+                    Grid.Column="0"  
+                    Grid.ColumnSpan="8" />
+            <Button Text="Cancel" 
+                    x:Name="Cencel" 
+                    Grid.Row="4" 
+                    Grid.Column="2" 
+                    Grid.ColumnSpan="3" 
+                    Clicked="Cencel_Clicked"/>
+            <Button Text="Save" 
+                    x:Name="Save" 
+                    Grid.Row="4" 
+                    Grid.Column="5" 
+                    Grid.ColumnSpan="3" 
+                    Clicked="Save_Clicked"/>
 
         </Grid>
     </StackLayout>

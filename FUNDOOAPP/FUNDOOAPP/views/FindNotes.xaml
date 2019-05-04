@@ -4,11 +4,13 @@
              x:Class="FUNDOOAPP.views.FindNotes">
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar Placeholder="Search Notes Here" TextChanged="SearchBar_TextChanged"></SearchBar>
+            <SearchBar Placeholder="Search Notes Here" 
+                       TextChanged="SearchBar_TextChanged"></SearchBar>
             <ListView x:Name="list">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Title}" Detail="{Binding Notes}">
+                        <TextCell Text="{Binding Title}" 
+                                  Detail="{Binding Notes}">
                         </TextCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

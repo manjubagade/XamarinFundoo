@@ -36,7 +36,6 @@ namespace FUNDOOAPP.views.Dashbord
             userImage.Tapped += this.userImage_Tapped;
             ///// Associating tap events to the image buttons    
             ProfilePic.GestureRecognizers.Add(userImage);
-
             this.MenuList = new List<MasterPageItem>();
             this.MenuList.Add(new MasterPageItem() { Title = "Notes", Icon = "keep.png", TargetType = typeof(Homepage) });
             this.MenuList.Add(new MasterPageItem() { Title = "Reminders", Icon = "rem.png", TargetType = typeof(Reminder) });
@@ -69,12 +68,20 @@ namespace FUNDOOAPP.views.Dashbord
             this.IsPresented = false;
         }
 
+        /// <summary>
+        /// this userImage_Tapped instance
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void userImage_Tapped(object sender, EventArgs e)
         {
           await  Navigation.PushModalAsync(new gallarypermition());
         }
 
-        protected  async override void OnAppearing()
+        /// <summary>
+        /// this OnAppearing instance
+        /// </summary>
+        protected async override void OnAppearing()
         {
             UserRepository userRepository = new UserRepository();
             User user = await userRepository.GetUserById();
@@ -87,17 +94,6 @@ namespace FUNDOOAPP.views.Dashbord
                 ProfilePic.HeightRequest = 70;
                 ProfilePic.WidthRequest = 70;
             }
-            //else
-            //{
-            //    var imagess = new UriImageSource
-            //    {
-            //        Uri =new Uri("")
-            //    };
-            //    imagess.CachingEnabled = false;
-            //    ProfilePic.Source = imagess;
-            //    ProfilePic.HeightRequest = 70;
-            //    ProfilePic.WidthRequest = 70;
-            //}
             base.OnAppearing();
         }
     }

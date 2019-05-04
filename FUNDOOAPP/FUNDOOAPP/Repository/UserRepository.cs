@@ -6,9 +6,6 @@
 namespace FUNDOOAPP.Repository
 {
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
     using Firebase.Database;
     using Firebase.Database.Query;
@@ -43,7 +40,11 @@ namespace FUNDOOAPP.Repository
                 string uid = await DependencyService.Get<IFirebaseAuthenticator>().AddUserWithEmailPassword(email, password);
                 if (uid != null)
                 {
-                    await this.firebaseclient.Child("User").Child(uid).Child("Userinfo").PostAsync<User>(new User() { FirstName = firstName, LastName = lastName });
+                    await this.firebaseclient.Child("User").Child(uid).Child("Userinfo").PostAsync<User>(new User()
+                    {
+                        FirstName = firstName,
+                        LastName = lastName
+                    });
                 }
 
                 return uid;
@@ -66,10 +67,14 @@ namespace FUNDOOAPP.Repository
             User user = await this.GetUserById();
             if (uid != null && user != null)
             {
-                    await firebaseclient.Child("User").Child(uid).Child("Userinfo").PutAsync<User>(new User() { FirstName = user.FirstName, LastName = user.LastName, Imageurl = imagesouce });
+                    await firebaseclient.Child("User").Child(uid).Child("Userinfo").PutAsync<User>(new User()
+                    {
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Imageurl = imagesouce
+                    });
             }
-
-            CrossToastPopUp.Current.ShowToastMessage("Profile Picure Uploaded Successfully");
+            CrossToastPopUp.Current.ShowToastMessage("Profile Picture Uploaded Successfully");
         }
 
         /// <summary>
@@ -88,7 +93,7 @@ namespace FUNDOOAPP.Repository
                     return user;
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return null;
             }
