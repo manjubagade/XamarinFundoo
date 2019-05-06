@@ -1,5 +1,8 @@
-﻿
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="labelspage.xaml.cs" company="BridgeLabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace FUNDOOAPP.views
 {
     using System;
@@ -19,6 +22,9 @@ namespace FUNDOOAPP.views
     /// <seealso cref="Xamarin.Forms.ContentPage" />
     public partial class labelspage : ContentPage
     {
+        /// <summary>
+        /// The uid
+        /// </summary>
         string uid = DependencyService.Get<IFirebaseAuthenticator>().User();
 
         /// <summary>
@@ -30,6 +36,7 @@ namespace FUNDOOAPP.views
         /// The note key
         /// </summary>
         private string noteKey = string.Empty;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="labelspage"/> class.
         /// </summary>

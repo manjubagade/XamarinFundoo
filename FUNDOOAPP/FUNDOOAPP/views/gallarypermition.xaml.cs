@@ -24,8 +24,11 @@ namespace FUNDOOAPP.views
     /// <seealso cref="Xamarin.Forms.ContentPage" />
     public partial class gallarypermition : ContentPage
      {
+        /// <summary>
+        /// The user repository
+        /// </summary>
+       private UserRepository userRepository = new UserRepository();
 
-        UserRepository userRepository = new UserRepository();
         /// <summary>
         /// The file
         /// </summary>
@@ -56,10 +59,10 @@ namespace FUNDOOAPP.views
 
                 if (this.file == null)
                     return;
-
+           
                 imgChoosed.Source = ImageSource.FromStream(() =>
                 {
-                    var imageStram = this.file.GetStream();
+                    var imageStram = this.file.GetStream(); 
                     return imageStram;
                 });
                 await this.StoreImages(this.file.GetStream());
@@ -88,13 +91,13 @@ namespace FUNDOOAPP.views
         public async Task StoreImages(Stream imageStream)
         {
             FirebaseClient firebaseclint = new FirebaseClient("https://fundooapp-810e7.firebaseio.com/");
-           // string timeStamp = GetTimestamp(DateTime.Now);
+           //// string timeStamp = GetTimestamp(DateTime.Now);
             var stroageImage = await new FirebaseStorage("fundooapp-810e7.appspot.com")
                 .Child("XamarinMonkeys").Child("image.jpg")
-                //.Child("image_" + timeStamp + ".jpg")
+                ////.Child("image_" + timeStamp + ".jpg")
                 .PutAsync(imageStream);
             string imgurl = stroageImage;
-            // return imgurl;
+            //// return imgurl;
             await userRepository.GetimageSouce(imgurl);
         }
 

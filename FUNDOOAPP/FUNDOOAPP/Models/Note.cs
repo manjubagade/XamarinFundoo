@@ -3,8 +3,6 @@
 //     Company copyright tag.
 // </copyright>
 //-----------------------------------------------------------------------
-
-
 namespace FUNDOOAPP.Models
 {
     using System.Collections.Generic;

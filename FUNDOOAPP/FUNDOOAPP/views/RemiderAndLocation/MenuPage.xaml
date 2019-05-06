@@ -82,11 +82,13 @@
                          Grid.Column="0" 
                          BackgroundColor="White"/>
             <Button Text ="Collaborator"
+                    x:Name="collaborator"
                     Grid.Row="3" 
                     Grid.Column="1" 
                     Grid.ColumnSpan="8" 
                     FontSize="Small" 
-                    BackgroundColor="White"/>
+                    BackgroundColor="White"
+                    Clicked="Collaborator_Clicked"/>
 
             <ImageButton Source="labelicon.png" 
                          Grid.Row="4"

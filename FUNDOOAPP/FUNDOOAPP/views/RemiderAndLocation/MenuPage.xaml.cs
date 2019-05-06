@@ -66,7 +66,7 @@ namespace FUNDOOAPP.views.RemiderAndLocation
                 note.noteType = NoteType.isTrash;
                 await this.notesRepository.UpdateNoteAsync(note, this.noteKeys, uid);
                 await Navigation.PushModalAsync(new Masterpage());
-                 //Navigation.RemovePage(this);
+                 ////Navigation.RemovePage(this);
                 await PopupNavigation.Instance.PopAsync(); 
                 CrossToastPopUp.Current.ShowToastMessage("Note Moved to Trash");
             }
@@ -102,7 +102,7 @@ namespace FUNDOOAPP.views.RemiderAndLocation
             });
 
             await PopupNavigation.Instance.PopAsync(true);
-           //  PopupNavigation.Instance.PushAsync(new SharePage());     
+           ////  PopupNavigation.Instance.PushAsync(new SharePage());     
         }
 
         /// <summary>
@@ -114,6 +114,13 @@ namespace FUNDOOAPP.views.RemiderAndLocation
         {
             await Navigation.PushModalAsync(new labelspage(noteKeys));
             await PopupNavigation.Instance.PopAsync(true);
+        }
+
+        private async void Collaborator_Clicked(object sender, EventArgs e)
+        {
+          await  PopupNavigation.Instance.PopAsync(true);
+          await  DisplayAlert("collaboter", "not done", "ok");
+           //// await Navigation.PushModalAsync(new Collabators());
         }
     }
 }

@@ -341,5 +341,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\imageprofile.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\circleimage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

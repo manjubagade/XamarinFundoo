@@ -50,13 +50,13 @@ namespace FUNDOOAPP.views
         /// </remarks>
         protected async override void OnAppearing()
         {
-            /// Calls run time service from respective device (Android, iOS, UWP) to get current user 
+            //// Calls run time service from respective device (Android, iOS, UWP) to get current user 
             var uid = DependencyService.Get<IFirebaseAuthenticator>().User();
 
-            /// Gets the notes from Database with respect to user
+            //// Gets the notes from Database with respect to user
             var notes = await this.noteRepository.GetNotesAsync(uid);
             IList<Note> noteForGrid = new List<Note>();
-            /// if response is not null it will go to method where it will render as a Grid view
+            //// if response is not null it will go to method where it will render as a Grid view
             if (notes != null)
             {
                 foreach (var item in notes)
@@ -138,7 +138,7 @@ namespace FUNDOOAPP.views
                         {
                             Spacing = 2,
                             Margin = 2,
-                          //  BackgroundColor = Color.White
+                          ////  BackgroundColor = Color.White
                         };
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         layout.Children.Add(labelKey);
@@ -147,7 +147,7 @@ namespace FUNDOOAPP.views
                         layout.GestureRecognizers.Add(tapGestureRecognizer);
                         layout.Spacing = 2;
                         layout.Margin = 2;
-                       // layout.BackgroundColor = Color.White;
+                       //// layout.BackgroundColor = Color.White;
 
                         var frame = new Frame();
                         frame.BorderColor = Color.Black;

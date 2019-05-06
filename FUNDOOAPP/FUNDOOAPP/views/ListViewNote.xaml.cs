@@ -44,30 +44,25 @@ namespace FUNDOOAPP.views
                 GridLayout.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(350) });
                 GridLayout.Margin = 5;
                 int rowCount = list.Count;
-
-
-
-                //ListView listView = new ListView() { HasUnevenRows = true };
-
+                ////ListView listView = new ListView() { HasUnevenRows = true };
                 var productIndex = 0;
                 var indexe = -1;
-
-                /// Iterate a single row at a time to add two notes in one row
+                //// Iterate a single row at a time to add two notes in one row
                 for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)
                 {
-                    /// iterating column to add per note in each column in a single row
+                    //// iterating column to add per note in each column in a single row
                     for (int columnIndex = 0; columnIndex < 1; columnIndex++)
                     {
                         Note data = null;
                         indexe++;
 
-                        /// to maintain the size of array to avoid exception
+                        //// to maintain the size of array to avoid exception
                         if (indexe < list.Count)
                         {
                             data = list[indexe];
                         }
 
-                        /// Once every note is added in respective column and row than it will break
+                        //// Once every note is added in respective column and row than it will break
                         if (productIndex >= list.Count)
                         {
                             break;
@@ -75,7 +70,6 @@ namespace FUNDOOAPP.views
 
                         productIndex += 1;
                         var index = rowIndex * columnIndex + columnIndex;
-
                         var label = new Xamarin.Forms.Label
                         {
                             Text = data.Title,
@@ -102,7 +96,7 @@ namespace FUNDOOAPP.views
                         {
                             Spacing = 2,
                             Margin = 2,
-                           // BackgroundColor = Color.White
+                           //// BackgroundColor = Color.White
                         };
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         layout.Children.Add(labelKey);
@@ -111,7 +105,7 @@ namespace FUNDOOAPP.views
                         layout.GestureRecognizers.Add(tapGestureRecognizer);
                         layout.Spacing = 2;
                         layout.Margin = 2;
-                      //  layout.BackgroundColor = Color.White;
+                      ////  layout.BackgroundColor = Color.White;
 
                         var frame = new Frame();
                         frame.BorderColor = Color.Black;
@@ -157,9 +151,9 @@ namespace FUNDOOAPP.views
                         listNote.Add(item);
                     }
                 }
+
                 this.ListGridView(listNote);
             }
-
         }
 
         /// <summary>
@@ -172,6 +166,11 @@ namespace FUNDOOAPP.views
           await Navigation.PushModalAsync(new Masterpage());
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Takenote control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private async void Takenote_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Notes());

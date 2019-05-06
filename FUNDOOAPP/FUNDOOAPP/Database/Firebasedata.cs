@@ -53,14 +53,14 @@ namespace FUNDOOAPP.Database
         /// <returns> return task</returns>
         public async Task AddPerson(string firstname, string lastname, string emailid, string password, string cpassword)
         {
-            await this.firebase
-              .Child("User")
-              .PostAsync(new Register() {
+            await this.firebase.Child("User").PostAsync(new Register()
+              {
                   Firstname = firstname,
                   Lastname = lastname,
                   Emailid = emailid,
                   Password = password,
-                  Cpassword = cpassword });
+                  Cpassword = cpassword
+              });
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace FUNDOOAPP.Database
         public async Task CreateLabel(string label)
         {
             var userid = DependencyService.Get<IFirebaseAuthenticator>().User();
-            await this.firebase.Child("User").Child(userid).Child("Lab").PostAsync(new  LabelNotes
+            await this.firebase.Child("User").Child(userid).Child("Lab").PostAsync(new LabelNotes
             {
                 Label = label
             });
@@ -128,13 +128,19 @@ namespace FUNDOOAPP.Database
         /// </summary>
         /// <param name="key">The key.</param>
         /// <param name="uid">The uid.</param>
-        /// <returns></returns>
+        /// <returns>return task</returns>
         public async Task<LabelNotes> GetLabel(string key, string uid)
         {
             LabelNotes labelNotes = await this.firebase.Child("User").Child(uid).Child("Lab").Child(key).OnceSingleAsync<LabelNotes>();
             return labelNotes;
         }
 
+        /// <summary>
+        /// Updates the lable.
+        /// </summary>
+        /// <param name="note">The note.</param>
+        /// <param name="key">The key.</param>
+        /// <param name="uid">The uid.</param>
         public async void UpdateLable(LabelNotes note, string key, string uid)
         {
             await this.firebase.Child("User").Child(uid).Child("Lab").Child(key).PutAsync<LabelNotes>(new LabelNotes()
@@ -142,11 +148,22 @@ namespace FUNDOOAPP.Database
                 Label = note.Label
             });
         }
+
+        /// <summary>
+        /// Deletes the label.
+        /// </summary>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="keyLabel">The key label.</param>
         public void DeleteLabel(string userId, string keyLabel)
         {
             this.firebase.Child("User").Child(userId).Child("Lab").Child(keyLabel).DeleteAsync();
         }
 
+        /// <summary>
+        /// Updatelabelstonoteses the specified key note.
+        /// </summary>
+        /// <param name="keyNote">The key note.</param>
+        /// <param name="note">The note.</param>
         public async void Updatelabelstonotes(string keyNote, Note note)
         {
             var userid = DependencyService.Get<IFirebaseAuthenticator>().User();

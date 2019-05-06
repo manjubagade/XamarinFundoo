@@ -59,11 +59,11 @@ namespace FUNDOOAPP.Repository
         /// <summary>
         /// Getimages the souce.
         /// </summary>
-        /// <param name="imagesouce">The imagesouce.</param>
+        /// <param name="imagesouce">The imagesource.</param>
         /// <returns>return task</returns>
         public async Task GetimageSouce(string imagesouce)
         {
-            string uid =  DependencyService.Get<IFirebaseAuthenticator>().User();
+            string uid = DependencyService.Get<IFirebaseAuthenticator>().User();
             User user = await this.GetUserById();
             if (uid != null && user != null)
             {
@@ -74,6 +74,7 @@ namespace FUNDOOAPP.Repository
                         Imageurl = imagesouce
                     });
             }
+
             CrossToastPopUp.Current.ShowToastMessage("Profile Picture Uploaded Successfully");
         }
 
@@ -97,6 +98,7 @@ namespace FUNDOOAPP.Repository
             {
                 return null;
             }
+
             return null;
         }
     }

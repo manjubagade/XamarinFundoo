@@ -49,8 +49,7 @@ namespace FUNDOOAPP.views
         /// </summary>
         public Homepage()
         {
-            this.InitializeComponent();
-            
+            this.InitializeComponent();  
         }
 
         /// <summary>
@@ -87,7 +86,6 @@ namespace FUNDOOAPP.views
                 noteType = item.Object.noteType
             }).ToList();
 
-
             IList<Note> listNote = new List<Note>();
             if (notesData == null)
             {
@@ -98,6 +96,7 @@ namespace FUNDOOAPP.views
                         listNote.Add(item);
                     }
                 }
+
                 this.NoteGridView(listNote);
             }
         }
@@ -180,20 +179,20 @@ namespace FUNDOOAPP.views
                         {
                             Spacing = 2,
                             Margin = 2,
-                           // BackgroundColor = Color.White
+                           //// BackgroundColor = Color.White
                         };
 
-                       // var panGesture = new PanGestureRecognizer();
-                      //  panGesture.PanUpdated += OnPanUpdated;
+                       //// var panGesture = new PanGestureRecognizer();
+                      ////  panGesture.PanUpdated += OnPanUpdated;
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         layout.Children.Add(labelKey);
                         layout.Children.Add(label);
                         layout.Children.Add(content);
                         layout.GestureRecognizers.Add(tapGestureRecognizer);
-                       // layout.GestureRecognizers.Add(panGesture);
+                       //// layout.GestureRecognizers.Add(panGesture);
                         layout.Spacing = 2;
                         layout.Margin = 2;
-                        //layout.BackgroundColor = Color.White;
+                        //// layout.BackgroundColor = Color.White;
 
                         var frame = new Frame();
                         frame.BorderColor = Color.Black;
@@ -244,7 +243,11 @@ namespace FUNDOOAPP.views
                 Console.WriteLine(ex.Message);
             }
         }
-        double x, y;
+
+        /// <summary>
+        /// The x,y
+        /// </summary>
+        public double x, y;
 
         /// <summary>
         /// Called when [pan updated].
@@ -255,17 +258,16 @@ namespace FUNDOOAPP.views
         {
             switch (e.StatusType)
             {
-
                 case GestureStatus.Running:
-                    // Translate and ensure we don't pan beyond the wrapped user interface element bounds.
-                    Content.TranslationX = Math.Max(Math.Min(0, x + e.TotalX), -Math.Abs(Content.Width - App.ScreenWidth));
-                    Content.TranslationY = Math.Max(Math.Min(0, y + e.TotalY), -Math.Abs(Content.Height - App.ScreenHeight));
+                    //// Translate and ensure we don't pan beyond the wrapped user interface element bounds.
+                    Content.TranslationX = Math.Max(Math.Min(0, this.x + e.TotalX), -Math.Abs(Content.Width - App.ScreenWidth));
+                    Content.TranslationY = Math.Max(Math.Min(0, this.y + e.TotalY), -Math.Abs(Content.Height - App.ScreenHeight));
                     break;
 
                 case GestureStatus.Completed:
-                    // Store the translation applied during the pan
-                    x = Content.TranslationX;
-                    y = Content.TranslationY;
+                    //// Store the translation applied during the pan
+                    this.x = Content.TranslationX;
+                    this.y = Content.TranslationY;
                     break;
             }
         }
@@ -293,6 +295,7 @@ namespace FUNDOOAPP.views
                             listNote.Add(item);
                         }
                     }
+
                     this.NoteGridView(listNote);
                     foreach (var item in notes)
                     {
@@ -301,8 +304,10 @@ namespace FUNDOOAPP.views
                             listnote1.Add(item);
                         }
                     }
+
                     this.NoteGridPin(listnote1);
                 }
+
                 UserRepository userRepository = new UserRepository();
                 User user = await userRepository.GetUserById();
                 if (user.Imageurl != null)
@@ -310,7 +315,7 @@ namespace FUNDOOAPP.views
                     ImageSource profileImage = user.Imageurl;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -335,7 +340,7 @@ namespace FUNDOOAPP.views
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new SharePage());
-            //await Navigation.PushAsync(new CameraPermition());
+            ////await Navigation.PushAsync(new CameraPermition());
         }
 
         /// <summary>
@@ -425,7 +430,7 @@ namespace FUNDOOAPP.views
                         {
                             Spacing = 2,
                             Margin = 2,
-                           // BackgroundColor = Color.White
+                           //// BackgroundColor = Color.White
                         };
                         var tapGestureRecognizer = new TapGestureRecognizer();
                         layout.Children.Add(labelKey);
@@ -434,7 +439,7 @@ namespace FUNDOOAPP.views
                         layout.GestureRecognizers.Add(tapGestureRecognizer);
                         layout.Spacing = 2;
                         layout.Margin = 2;
-                        //layout.BackgroundColor = Color.White;
+                        ////layout.BackgroundColor = Color.White;
 
                         var frame = new Frame();
                         frame.BorderColor = Color.Black;
@@ -460,12 +465,14 @@ namespace FUNDOOAPP.views
             }
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Profile control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Profile_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new gallarypermition());
         }
-
-       
-
     }
 }

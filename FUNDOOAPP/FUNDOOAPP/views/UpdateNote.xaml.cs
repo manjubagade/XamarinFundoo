@@ -117,7 +117,7 @@ namespace FUNDOOAPP.views
             string uid = DependencyService.Get<IFirebaseAuthenticator>().User();
             Note note = await this.notesRepository.GetNoteByKeyAsync(this.noteKeys, uid);
             Delete delete = new Delete();
-           // delete.Trash(note);
+           //// delete.Trash(note);
             await this.firebaseclint.Child("User").Child(uid).Child("Note").Child(this.noteKeys).DeleteAsync();
         }
 
@@ -138,8 +138,8 @@ namespace FUNDOOAPP.views
                     ColorNote = this.noteBackGroundColor,
                     LabelsList = lists,
                 };
-               this.notesRepository.UpdateNoteAsync(newnote, this.noteKeys, uid);
 
+        var results=this.notesRepository.UpdateNoteAsync(newnote, this.noteKeys, uid);
                 return base.OnBackButtonPressed();
             }
             else

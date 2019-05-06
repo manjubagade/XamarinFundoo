@@ -25,11 +25,11 @@ namespace FUNDOOAPP.views.Dashbord
         public Masterpage()
         {
             this.InitializeComponent();
-            //var imgsource = new UriImageSource { Uri = new Uri("https://firebasestorage.googleapis.com/v0/b/fundooapp-810e7.appspot.com/o/XamarinMonkeys%2Fimage.jpg?alt=media&token=70743c7b-b1c7-472e-8af4-58c13b2da0ef") };
-            //imgsource.CachingEnabled = false;
-            //ProfilePic.Source = imgsource;
-            //ProfilePic.HeightRequest = 100;
-            //ProfilePic.WidthRequest = 100;
+            ////var imgsource = new UriImageSource { Uri = new Uri("https://firebasestorage.googleapis.com/v0/b/fundooapp-810e7.appspot.com/o/XamarinMonkeys%2Fimage.jpg?alt=media&token=70743c7b-b1c7-472e-8af4-58c13b2da0ef") };
+            ////imgsource.CachingEnabled = false;
+            ////ProfilePic.Source = imgsource;
+            ////ProfilePic.HeightRequest = 100;
+            ////ProfilePic.WidthRequest = 100;
             OnAppearing();
             var userImage = new TapGestureRecognizer();
             //// Binding events 

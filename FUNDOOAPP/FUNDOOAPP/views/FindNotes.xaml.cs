@@ -20,7 +20,7 @@ namespace FUNDOOAPP.views
     /// </summary>
     /// <seealso cref="Xamarin.Forms.ContentPage" />
     public partial class FindNotes : ContentPage
-	{
+     {
         /// <summary>
         /// The note data
         /// </summary>
@@ -62,7 +62,7 @@ namespace FUNDOOAPP.views
             var userid = DependencyService.Get<IFirebaseAuthenticator>().User();
             NotesRepository notesRepository = new NotesRepository();
             List<Note> note = await notesRepository.GetNotesAsync(userid);
-            note = note.Where(a => a.noteType != NoteType.isArchive && a.noteType != NoteType.isTrash ).ToList();
+            note = note.Where(a => a.noteType != NoteType.isArchive && a.noteType != NoteType.isTrash).ToList();
             this.noteData = note;
         }
     }

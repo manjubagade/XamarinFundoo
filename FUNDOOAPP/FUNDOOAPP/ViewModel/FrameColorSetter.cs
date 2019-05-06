@@ -1,13 +1,24 @@
-﻿using FUNDOOAPP.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="FrameColorSetter.cs" company="BridgeLabz">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace FUNDOOAPP.ViewModel
 {
-    class FrameColorSetter : ContentPage
+    using FUNDOOAPP.Models;
+    using Xamarin.Forms;
+
+    /// <summary>
+    /// this FrameColorSetter class instance
+    /// </summary>
+    /// <seealso cref="Xamarin.Forms.ContentPage" />
+   public class FrameColorSetter : ContentPage
     {
+        /// <summary>
+        /// Gets the color.
+        /// </summary>
+        /// <param name="note">The note.</param>
+        /// <param name="frame">The frame.</param>
         public static void GetColor(Note note, Frame frame)
         {
             if (note.ColorNote.Equals("Red"))
@@ -63,31 +74,37 @@ namespace FUNDOOAPP.ViewModel
                 frame.BackgroundColor = Color.White;
                 return;
             }
+
             if (note.ColorNote.Equals("Green"))
             {
                 frame.BackgroundColor = Color.Green;
                 return;
             }
+
             if (note.ColorNote.Equals("Yellow"))
             {
                 frame.BackgroundColor = Color.Yellow;
                 return;
             }
+
             if (note.ColorNote.Equals("Orange"))
             {
                 frame.BackgroundColor = Color.Orange;
                 return;
             }
+
             if (note.ColorNote.Equals("Teal"))
             {
                 frame.BackgroundColor = Color.Teal;
                 return;
             }
+
             if (note.ColorNote.Equals("Purple"))
             {
                 frame.BackgroundColor = Color.Purple;
                 return;
             }
+
             if (note.ColorNote.Equals("Brown"))
             {
                 frame.BackgroundColor = Color.Brown;
@@ -99,7 +116,7 @@ namespace FUNDOOAPP.ViewModel
         /// Gets the color of the hexadecimal.
         /// </summary>
         /// <param name="note">The note.</param>
-        /// <returns></returns>
+        /// <returns>return task</returns>
         public static string GetHexColor(Note note)
         {
             if (note.ColorNote.Equals("Green"))
