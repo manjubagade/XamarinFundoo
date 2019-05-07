@@ -3,10 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FUNDOOAPP.views.Collabators">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        
+
+        <Grid RowSpacing="0" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            <Image Source="cross.png" 
+                   HeightRequest="40" 
+                   WidthRequest="40" 
+                   Grid.Row="0" 
+                   Grid.Column="0" 
+                   BackgroundColor="White"></Image>
+            <Label Text="    Collaborators         "  Grid.Row="0" 
+                   Grid.Column="1" 
+                   Grid.ColumnSpan="5" FontSize="Medium"></Label>
+           
+            <Image Source="manju.png" 
+                       HeightRequest="40"   
+                       WidthRequest="40" 
+                       Grid.Row="1" 
+                       Grid.Column="1"/>
+                <Label Text="themanju.bagade@gmail.com" 
+                       Grid.ColumnSpan="8" 
+                       TextColor="Black" 
+                       FontAttributes="Bold"
+                       Grid.Row="1" 
+                       Grid.Column="2"
+                       FontSize="Medium"></Label>
+            
+            <Image Source="profileimage" 
+                   HeightRequest="40"
+                   WidthRequest="40"
+                   Grid.Row="2" 
+                   Grid.Column="1" ></Image>
+            <Entry Placeholder="Person or emailto share with"
+                   Grid.Row="2" Grid.Column="2" 
+                   Grid.ColumnSpan="8"/>
+        </Grid> 
+            
     </ContentPage.Content>
 </ContentPage>

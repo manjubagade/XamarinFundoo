@@ -6,7 +6,7 @@
 namespace FUNDOOAPP.views
 {
     using System;
-    using System.Text.RegularExpressions;
+    using System.Text.RegularExpressions;   
     using FUNDOOAPP.Database;
     using FUNDOOAPP.Interfaces;
     using FUNDOOAPP.Models;
