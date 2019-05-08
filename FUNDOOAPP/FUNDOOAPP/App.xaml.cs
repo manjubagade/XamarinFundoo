@@ -17,7 +17,14 @@ namespace FUNDOOAPP
     /// <seealso cref="Xamarin.Forms.Application" />
     public partial class App : Application
     {
+        /// <summary>
+        /// The screen width
+        /// </summary>
         public static double ScreenWidth;
+
+        /// <summary>
+        /// The screen height
+        /// </summary>
         public static double ScreenHeight;
 
         /// <summary>

@@ -94,6 +94,7 @@ namespace FUNDOOAPP.views.Dashbord
                 ProfilePic.HeightRequest = 70;
                 ProfilePic.WidthRequest = 70;
             }
+
             base.OnAppearing();
         }
     }

@@ -87,7 +87,7 @@ namespace FUNDOOAPP.Repository
             try
             {
                 string uid = DependencyService.Get<IFirebaseAuthenticator>().User();
-                //User user;
+                ////User user;
                 if (uid != null)
                 {
                     User user = await this.firebaseclient.Child("User").Child(uid).Child("Userinfo").OnceSingleAsync<User>();

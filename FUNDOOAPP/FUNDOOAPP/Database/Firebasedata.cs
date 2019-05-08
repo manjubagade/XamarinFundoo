@@ -136,11 +136,11 @@ namespace FUNDOOAPP.Database
         }
 
         /// <summary>
-        /// Updates the lable.
+        /// Updates the label
         /// </summary>
-        /// <param name="note">The note.</param>
-        /// <param name="key">The key.</param>
-        /// <param name="uid">The uid.</param>
+        /// <param name="note">The note</param>
+        /// <param name="key">The key</param>
+        /// <param name="uid">The uid</param>
         public async void UpdateLable(LabelNotes note, string key, string uid)
         {
             await this.firebase.Child("User").Child(uid).Child("Lab").Child(key).PutAsync<LabelNotes>(new LabelNotes()

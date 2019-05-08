@@ -47,6 +47,7 @@ namespace FUNDOOAPP.views
         /// The note back ground color
         /// </summary>
         public string noteBackGroundColor = "White";
+
         /// <summary>
         /// this class UpdateNote instance
         /// </summary>
@@ -104,7 +105,7 @@ namespace FUNDOOAPP.views
             }
             else if (note.noteType == NoteType.ispin)
             {
-                ToolbarItems.Add(PinCard1);
+                ToolbarItems.Add(this.PinCard1);
             }
             
         }

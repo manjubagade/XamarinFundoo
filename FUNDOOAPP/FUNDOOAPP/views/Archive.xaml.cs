@@ -178,6 +178,7 @@ namespace FUNDOOAPP.views
                                 }
                             }
                         }
+
                         tapGestureRecognizer.Tapped += (object sender, EventArgs args) =>
                         {
                             StackLayout layout123 = (StackLayout)sender;
