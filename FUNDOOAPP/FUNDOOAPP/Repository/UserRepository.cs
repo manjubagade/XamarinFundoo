@@ -43,7 +43,8 @@ namespace FUNDOOAPP.Repository
                     await this.firebaseclient.Child("User").Child(uid).Child("Userinfo").PostAsync<User>(new User()
                     {
                         FirstName = firstName,
-                        LastName = lastName
+                        LastName = lastName,
+                        Email=email         
                     });
                 }
 

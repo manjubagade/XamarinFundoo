@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cardView="clr-namespace:CardViewNetStandard;assembly=CardViewNetStandard"
-             x:Class="FUNDOOAPP.views.Homepage">
+             x:Class="FUNDOOAPP.views.Homepage" BackgroundImage="backgroundimage">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="Searchbar" Text="Search note                     " 
                      Priority="0" Clicked="Searchbar_Clicked"/>

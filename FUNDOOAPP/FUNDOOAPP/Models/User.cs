@@ -34,6 +34,9 @@ namespace FUNDOOAPP.Models
         /// <value>
         /// The last name.
         /// </value>
-        public string LastName { get; set; }   
+        public string LastName { get; set; }  
+
+        
+        public string Email { get; set; }
     }
 }

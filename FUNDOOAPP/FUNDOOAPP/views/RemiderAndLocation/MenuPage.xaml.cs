@@ -116,12 +116,16 @@ namespace FUNDOOAPP.views.RemiderAndLocation
             await PopupNavigation.Instance.PopAsync(true);
         }
 
-        private async void Collaborator_Clicked(object sender, EventArgs e)
+        private  void Collaborator_Clicked(object sender, EventArgs e)
         {
-          ////await  PopupNavigation.Instance.PopAsync(true);
-          //// await  DisplayAlert("collaboter", "not done", "ok");
-           await Navigation.PushModalAsync(new Collabators());
-            await PopupNavigation.Instance.PopAsync(true);
+            Navigation.PushModalAsync(new Collabators());
+            PopupNavigation.Instance.PopAsync(true);
+        }
+
+        private async void Collaborators_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Collabators());
+            await PopupNavigation.Instance.PopAsync();
         }
     }
 }
