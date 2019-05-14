@@ -38,9 +38,9 @@ namespace FUNDOOAPP.Repository
                 Key = item.Key,
                 DateTime = item.Object.DateTime,
                ColorNote=item.Object.ColorNote,
-               LabelsList = item.Object.LabelsList
+               LabelsList = item.Object.LabelsList  
             }).ToList();
-
+   
             return notesData;
         }
 
@@ -64,7 +64,28 @@ namespace FUNDOOAPP.Repository
         /// <param name="uid">The user id.</param>
         public async Task UpdateNoteAsync(Note note, string key, string uid)
         {
-            await this.firebaseclient.Child("User").Child(uid).Child("Note").Child(key).PutAsync<Note>(new Note() { Title = note.Title, Notes = note.Notes, noteType = note.noteType,ColorNote=note.ColorNote,LabelsList=note.LabelsList });
+           // if(note.noteType!=NoteType.isCollaborated)
+          //  {
+                await this.firebaseclient.Child("User").Child(uid).Child("Note").Child(key).PutAsync<Note>(new Note() { Title = note.Title, Notes = note.Notes, noteType = note.noteType, ColorNote = note.ColorNote, LabelsList = note.LabelsList });
+
+           // }
+            //await this.firebaseclient.Child("User").Child(uid).Child("Note").Child(key).PutAsync<Note>(new Note() { Title = note.Title, Notes = note.Notes, noteType = note.noteType,ColorNote=note.ColorNote,LabelsList=note.LabelsList });
+            //else
+            //{
+                //var users = await firebaseclient.Child("User").OnceAsync<Note>();
+
+               // foreach (var items in users)
+                //{
+                   // var noteCollabrator = await firebaseclient.Child("User").Child(items.Key).Child("Notes").OnceAsync<Note>();
+                   // foreach (var item in noteCollabrator)
+                    //{
+                       // if (item.Key == note.Key)
+                        //{
+                           // await this.firebaseclient.Child("User").Child(items.Key).Child("Note").Child(key).PutAsync(new Note() { Title = note.Title, Notes = note.Notes, ColorNote = note.ColorNote, LabelsList=note.LabelsList,noteType=note.noteType });
+                       // }
+                    //}
+              //  }
+           // }
         }
 
         /// <summary>

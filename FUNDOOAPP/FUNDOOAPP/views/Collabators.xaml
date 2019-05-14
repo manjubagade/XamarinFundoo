@@ -30,9 +30,9 @@
             <Label Text="Collaborators"  Grid.Row="0" 
                    Grid.Column="3" 
                    Grid.ColumnSpan="8" FontSize="Large"></Label>
-            <Label Text="Save" Grid.Row="0" Grid.Column="8"  
+            <Button Text="Save" Grid.Row="0" Grid.Column="8"  
                     Grid.ColumnSpan="3" x:Name="savebtn"
-                    FontSize="Large" BackgroundColor="White"/>
+                    FontSize="Large" BackgroundColor="White"  Clicked="Savebtn_Clicked"/>
             <Image Source="manju.png" 
                        HeightRequest="40"   
                        WidthRequest="40" 

@@ -118,13 +118,13 @@ namespace FUNDOOAPP.views.RemiderAndLocation
 
         private  void Collaborator_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new Collabators());
+            Navigation.PushModalAsync(new Collabators(this.noteKeys));
             PopupNavigation.Instance.PopAsync(true);
         }
 
         private async void Collaborators_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Collabators());
+            await Navigation.PushModalAsync(new Collabators(this.noteKeys));
             await PopupNavigation.Instance.PopAsync();
         }
     }

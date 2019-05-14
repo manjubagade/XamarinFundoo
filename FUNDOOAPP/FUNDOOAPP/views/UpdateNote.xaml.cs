@@ -84,6 +84,9 @@ namespace FUNDOOAPP.views
             editor.Text = note.Title;
             editorNote.Text = note.Notes;
             lists = note.LabelsList;
+            // note.noteType = NoteType.isCollaborated;
+            //var notesss = note.noteType;
+            
             this.BackgroundColor = Color.FromHex(FrameColorSetter.GetHexColor(note));
             ToolbarItems.Clear();
             if (note.noteType == NoteType.isNote)
@@ -138,6 +141,10 @@ namespace FUNDOOAPP.views
                     Notes = editorNote.Text,
                     ColorNote = this.noteBackGroundColor,
                     LabelsList = lists,
+                    // noteType=NoteType.isCollaborated,
+                    // Key=this.noteKeys
+                    
+
                 };
 
         var results=this.notesRepository.UpdateNoteAsync(newnote, this.noteKeys, uid);

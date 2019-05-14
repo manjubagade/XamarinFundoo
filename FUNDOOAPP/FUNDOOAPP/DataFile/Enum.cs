@@ -37,7 +37,12 @@ namespace FUNDOOAPP.DataFile
             /// <summary>
             /// The ispin
             /// </summary>
-            ispin
+            ispin,
+
+            /// <summary>
+            /// The is collaborated
+            /// </summary>
+            isCollaborated
         }
     }
 }
