@@ -49,6 +49,7 @@ namespace FUNDOOAPP.views
         /// </summary>
         public Homepage()
         {
+           
             this.InitializeComponent();  
         }
 
@@ -251,7 +252,7 @@ namespace FUNDOOAPP.views
 
         /// <summary>
         /// Called when [pan updated].
-        /// </summary>
+        /// </summary> 
         /// <param name="sender">The sender.</param>
         /// <param name="e">The <see cref="PanUpdatedEventArgs"/> instance containing the event data.</param>
         void OnPanUpdated(object sender, PanUpdatedEventArgs e)
